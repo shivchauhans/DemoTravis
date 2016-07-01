@@ -12,8 +12,8 @@ android:
 #- emulator -avd test -no-skin -no-audio -no-window &
 #- adb wait-for-device
 #- adb shell input keyevent 82 &
-#script:
-#- ./gradlew connectedAndroidTest
+script:
+   - gradle build -x test
 
 
 
