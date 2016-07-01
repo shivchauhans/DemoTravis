@@ -1,15 +1,15 @@
 language: android
 android:
   components:
-    - build-tools-23.0.3
+    - build-tools-23.0.0
     - android-23
     - extra
 
 script:
 - ./gradlew build jacocoTestReport assembleAndroidTest
-- echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
-- emulator -avd test -no-skin -no-audio -no-window &
-- android-wait-for-emulator
+#- echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+#- emulator -avd test -no-skin -no-audio -no-window &
+#- android-wait-for-emulator
 - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
 - ./gradlew connectedCheck
 after_success:
