@@ -3,7 +3,7 @@ android:
   components:
     - build-tools-23.0.0
     - android-23
-    # - extra
+    - extra
     # - sys-img-armeabi-v7a-addon-google_apis-google-23
 
 #before_script:
