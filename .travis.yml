@@ -5,3 +5,9 @@ android:
     - android-23
     - extra
 
+script:
+    - /gradle build connectedCheck
+    - /ant debug install test
+
+
+
